@@ -1,9 +1,10 @@
-package fr.lernejo.chat;
+package lernejo.chat;
 
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class ChatMessageRepository {
     public ArrayList<String> list ;
