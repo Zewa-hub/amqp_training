@@ -15,7 +15,7 @@ public class Launcher {
         RabbitTemplate rt = new AnnotationConfigApplicationContext(Launcher.class).getBean(RabbitTemplate.class);
         while (!currentLine.equals("q"))
         {
-            rt.convertAndSend("chat_messages",currentLine);
+            rt.convertAndSend("","chat_messages",currentLine);
             System.out.println("Message sent, Input a message , we will sent it for you (q for quit)");
             currentLine = scan.nextLine();
         }
