@@ -15,7 +15,7 @@ public class ChatMessageRepository {
     }
     public List<String> getLastTenMessages()
     {
-        if (list.size() > 10) {
+        if (list.size() > 11) {
             list.remove(0);
         }
         return list.subList(Math.max(list.size() - 10, 0), list.size());
