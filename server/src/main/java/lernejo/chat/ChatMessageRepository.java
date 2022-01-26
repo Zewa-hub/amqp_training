@@ -7,11 +7,7 @@ import java.util.List;
 
 @Repository
 public class ChatMessageRepository {
-    public ArrayList<String> list ;
-
-    public ChatMessageRepository() {
-        this.list =  new ArrayList<String>(10);
-    }
+    public ArrayList<String> list = new ArrayList<String>(10);
 
     public void addChatMessage(String message)
     {
@@ -19,15 +15,9 @@ public class ChatMessageRepository {
     }
     public List<String> getLastTenMessages()
     {
-        if (list.size() < 9)
-        {
-            return list.subList(0, list.size());
+        if (list.size() > 10) {
+            list.remove(0);
         }
-        else
-        {
-            return list.subList(Math.max(list.size() - 10, 0), list.size());
-        }
-
+        return list.subList(Math.max(list.size() - 10, 0), list.size());
     }
-
 }
