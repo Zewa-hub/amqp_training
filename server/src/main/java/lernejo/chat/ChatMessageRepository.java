@@ -7,7 +7,7 @@ import java.util.List;
 
 @Repository
 public class ChatMessageRepository {
-    public ArrayList<String> list = new ArrayList<String>(10);
+    public ArrayList<String> list = new ArrayList<>(10);
 
     public void addChatMessage(String message)
     {
